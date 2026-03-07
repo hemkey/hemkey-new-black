@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium real estate wealth management — building legacies, defining skylines." />
+  <title>Prestige Estates — Real Estate Wealth Management</title>
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="assets/Sobha_(company).svg" type="image/x-icon" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" role="banner">
+
+    <!-- Logo -->
+    <a href="index.html" class="navbar__logo" aria-label="Prestige Estates Home">
+        <img src="assets/Sobha_(company).svg" alt="Prestige Estates Logo" class="navbar__logo-img">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav aria-label="Main navigation">
+      <ul class="navbar__nav">
+
+        <li class="navbar__nav-item">
+          <a href="#about" class="navbar__nav-link">About</a>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="pages/projects.html" class="navbar__nav-link has-dropdown">
+            Projects <span class="chevron">▾</span>
+          </a>
+          <div class="navbar__dropdown" role="menu">
+            <a href="pages/residential.html" class="navbar__dropdown-link" role="menuitem">Residential</a>
+            <a href="pages/commercial.html" class="navbar__dropdown-link" role="menuitem">Commercial</a>
+            <a href="pages/senior-living.html" class="navbar__dropdown-link" role="menuitem">Senior Living</a>
+            <a href="pages/mixed-use.html" class="navbar__dropdown-link" role="menuitem">Mixed-Use / Township</a>
+          </div>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="#services" class="navbar__nav-link">Services</a>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="#testimonials" class="navbar__nav-link">Testimonials</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- CTA -->
+    <a href="#contact" class="navbar__cta" aria-label="Connect with us">Connect Us</a>
+
+    <!-- Mobile Hamburger -->
+    <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile Full-Screen Menu -->
+    <div class="navbar__mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="pages/projects.html">Projects</a>
+      <div class="mobile-sub">
+        <a href="pages/residential.html">Residential</a>
+        <a href="pages/commercial.html">Commercial</a>
+        <a href="pages/senior-living.html">Senior Living</a>
+        <a href="pages/mixed-use.html">Mixed-Use</a>
+      </div>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact" class="btn-primary" style="-webkit-text-fill-color:var(--black-deep);">Connect Us</a>
+    </div>
+
+  </header>
+
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" aria-label="Hero">
+
+    <!-- Video / Placeholder -->
+    <div class="hero__video-container">
+      <!--
+        TO ADD YOUR VIDEO:
+        Replace the placeholder div below with:
+        <video class="hero__video" autoplay muted loop playsinline>
+          <source src="assets/videos/hero-reel.mp4" type="video/mp4" />
+        </video>
+      -->
+      <div class="hero__video-placeholder">
+        <div class="hero__placeholder-label">
+          <span>Drop your hero video here — assets/videos/hero-reel.mp4</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlays -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__overlay-side" aria-hidden="true"></div>
+
+    <!-- Hero Content -->
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__eyebrow-line"></span>
+        <span class="hero__eyebrow-text">Real Estate Wealth Management</span>
+      </div>
+
+      <h1 class="hero__title">
+        Building
+        <span class="hero__word-carousel" aria-label="Legacies, Skylines, Futures, Empires">
+          <span class="word">Legacies</span>
+          <span class="word">Skylines</span>
+          <span class="word">Futures</span>
+          <span class="word">Empires</span>
+        </span><br />
+        That Endure
+      </h1>
+
+      <p class="hero__subtitle">
+        Where visionary investment meets architectural mastery.
+        We craft premium real estate portfolios designed for those who demand more than property — they demand legacy.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn-primary">Explore Portfolio</a>
+        <a href="#about" class="btn-outline">Our Story</a>
+      </div>
+    </div>
+
+    <!-- Video Mute Control -->
+    <div class="hero__video-controls">
+      <button class="hero__mute-btn" aria-label="Toggle mute">
+        <span class="hero__mute-icon">
+          <!-- Icon injected by video.js -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-text">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== STATS STRIP ===================== -->
+  <section class="stats" aria-label="Company statistics">
+    <div class="stats__inner">
+
+      <div class="stats__item reveal">
+        <span class="stats__number"
+              data-counter
+              data-target="25"
+              data-suffix="+">0+</span>
+        <span class="stats__label">Years of Excellence</span>
+      </div>
+
+      <div class="stats__item reveal reveal-delay-1">
+        <span class="stats__number"
+              data-counter
+              data-target="380"
+              data-suffix="+">0+</span>
+        <span class="stats__label">Projects Delivered</span>
+      </div>
+
+      <div class="stats__item reveal reveal-delay-2">
+        <span class="stats__number"
+              data-counter
+              data-target="14">0</span>
+        <span class="stats__label">Cities Presence</span>
+      </div>
+
+      <div class="stats__item reveal reveal-delay-3">
+        <span class="stats__number"
+              data-counter
+              data-target="12000"
+              data-suffix="+">0+</span>
+        <span class="stats__label">Happy Families</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="about__inner">
+
+      <!-- Visual -->
+      <div class="about__visual reveal">
+        <div class="about__image-frame">
+          <!-- Replace with your actual image -->
+          <!-- <img src="assets/images/about-building.jpg" alt="Prestige Estates landmark development" /> -->
+          <div class="about__image-placeholder">
+            <span class="about__image-placeholder-text">About Image</span>
+          </div>
+        </div>
+        <div class="about__badge">
+          <span class="about__badge-number">25</span>
+          <span class="about__badge-label">Years of Trust</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="about__content">
+
+        <div class="about__tag reveal">
+          <span class="gold-line"></span>
+          <span>Who We Are</span>
+        </div>
+
+        <h2 class="about__heading reveal reveal-delay-1" id="about-heading">
+          Not Just Property.<br />
+          <em>Generational Wealth.</em>
+        </h2>
+
+        <p class="about__body reveal reveal-delay-2">
+          For over two decades, Prestige Estates has stood at the intersection of visionary architecture and strategic investment. We don't merely build structures — we craft environments where ambition is realised and legacies take root.
+        </p>
+
+        <p class="about__body reveal reveal-delay-2">
+          Our portfolio spans residential sanctuaries, commercial landmarks, senior living communities, and master-planned townships — each a testament to our unwavering commitment to excellence, trust, and transformative returns.
+        </p>
+
+        <div class="about__pillars reveal reveal-delay-3">
+
+          <div class="about__pillar">
+            <div class="about__pillar-icon">⬡</div>
+            <div class="about__pillar-text">
+              <strong>Reliability</strong>
+              <p>Decades of on-time delivery and transparent dealings. Your investment is our covenant.</p>
+            </div>
+          </div>
+
+          <div class="about__pillar">
+            <div class="about__pillar-icon">⬡</div>
+            <div class="about__pillar-text">
+              <strong>Growth</strong>
+              <p>Strategically positioned assets across high-growth corridors that deliver consistent appreciation.</p>
+            </div>
+          </div>
+
+          <div class="about__pillar">
+            <div class="about__pillar-icon">⬡</div>
+            <div class="about__pillar-text">
+              <strong>Luxury</strong>
+              <p>Spaces designed beyond the ordinary — where every detail speaks of craftsmanship and prestige.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="reveal reveal-delay-4" style="margin-top:2rem;">
+          <a href="#contact" class="btn-primary">Start Your Journey</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+
+    <div class="section-header">
+      <div class="section-tag reveal">
+        <span class="gold-line"></span>
+        <span>What We Offer</span>
+        <span class="gold-line"></span>
+      </div>
+      <h2 class="section-heading reveal reveal-delay-1" id="services-heading">
+        A Full Spectrum of<br /><em>Real Estate Excellence</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        From acquisition to appreciation, our end-to-end services ensure every investment performs with precision and purpose.
+      </p>
+    </div>
+
+    <div class="services__grid">
+
+      <div class="services__card reveal">
+        <span class="services__card-number">01</span>
+        <span class="services__card-icon">🏛️</span>
+        <h3 class="services__card-title">Wealth Advisory</h3>
+        <p class="services__card-body">
+          Tailored investment strategies built on deep market intelligence, ensuring your portfolio grows with resilience and purpose across market cycles.
+        </p>
+        <a href="#" class="services__card-link">Learn More →</a>
+      </div>
+
+      <div class="services__card reveal reveal-delay-1">
+        <span class="services__card-number">02</span>
+        <span class="services__card-icon">🏙️</span>
+        <h3 class="services__card-title">Residential Development</h3>
+        <p class="services__card-body">
+          Luxury residences crafted for the discerning buyer — from curated apartments to ultra-premium villas with world-class amenities.
+        </p>
+        <a href="pages/residential.html" class="services__card-link">Explore Homes →</a>
+      </div>
+
+      <div class="services__card reveal reveal-delay-2">
+        <span class="services__card-number">03</span>
+        <span class="services__card-icon">🏢</span>
+        <h3 class="services__card-title">Commercial Spaces</h3>
+        <p class="services__card-body">
+          Grade A office towers, retail destinations, and mixed-use developments positioned in prime commercial corridors for maximum yield.
+        </p>
+        <a href="pages/commercial.html" class="services__card-link">View Projects →</a>
+      </div>
+
+      <div class="services__card reveal reveal-delay-3">
+        <span class="services__card-number">04</span>
+        <span class="services__card-icon">🌿</span>
+        <h3 class="services__card-title">Senior Living</h3>
+        <p class="services__card-body">
+          Dignified, thoughtfully designed communities that celebrate life at every stage — with care, community, and comfort at their core.
+        </p>
+        <a href="pages/senior-living.html" class="services__card-link">Discover Living →</a>
+      </div>
+
+      <div class="services__card reveal reveal-delay-4">
+        <span class="services__card-number">05</span>
+        <span class="services__card-icon">🗺️</span>
+        <h3 class="services__card-title">Township Planning</h3>
+        <p class="services__card-body">
+          Integrated master-planned townships — self-sustaining urban ecosystems that redefine community living and long-term value.
+        </p>
+        <a href="pages/mixed-use.html" class="services__card-link">See Townships →</a>
+      </div>
+
+      <div class="services__card reveal reveal-delay-5">
+        <span class="services__card-number">06</span>
+        <span class="services__card-icon">📈</span>
+        <h3 class="services__card-title">Portfolio Management</h3>
+        <p class="services__card-body">
+          Active management of your real estate assets — from acquisition to exit strategy — maximising returns and minimising exposure.
+        </p>
+        <a href="#contact" class="services__card-link">Talk to Us →</a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===================== FEATURED PROJECTS ===================== -->
+  <section class="projects" id="projects" aria-labelledby="projects-heading">
+
+    <div class="section-header">
+      <div class="section-tag reveal">
+        <span class="gold-line"></span>
+        <span>Our Portfolio</span>
+        <span class="gold-line"></span>
+      </div>
+      <h2 class="section-heading reveal reveal-delay-1" id="projects-heading">
+        Signature<br /><em>Developments</em>
+      </h2>
+      <p class="section-sub reveal reveal-delay-2">
+        A curated selection of landmark projects that define skylines and deliver exceptional value.
+      </p>
+    </div>
+
+    <!-- Filter -->
+    <div class="projects__filter reveal">
+      <button class="projects__filter-btn active" data-filter="all">All</button>
+      <button class="projects__filter-btn" data-filter="residential">Residential</button>
+      <button class="projects__filter-btn" data-filter="commercial">Commercial</button>
+      <button class="projects__filter-btn" data-filter="senior">Senior Living</button>
+      <button class="projects__filter-btn" data-filter="township">Township</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects__grid">
+
+      <div class="project-card reveal" data-category="residential">
+        <div class="project-card__image">
+          <!-- <img class="project-card__img" src="assets/images/projects/project-1.jpg" alt="The Apex Residences" /> -->
+          <div class="project-card__img-placeholder"><span>Project Image</span></div>
+        </div>
+        <div class="project-card__overlay"></div>
+        <div class="project-card__info">
+          <span class="project-card__category">Residential</span>
+          <h3 class="project-card__name">The Apex Residences</h3>
+          <span class="project-card__location">📍 Mumbai, Maharashtra</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-category="commercial">
+        <div class="project-card__image">
+          <div class="project-card__img-placeholder"><span>Project Image</span></div>
+        </div>
+        <div class="project-card__overlay"></div>
+        <div class="project-card__info">
+          <span class="project-card__category">Commercial</span>
+          <h3 class="project-card__name">Meridian Business Park</h3>
+          <span class="project-card__location">📍 Pune, Maharashtra</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-category="senior">
+        <div class="project-card__image">
+          <div class="project-card__img-placeholder"><span>Project Image</span></div>
+        </div>
+        <div class="project-card__overlay"></div>
+        <div class="project-card__info">
+          <span class="project-card__category">Senior Living</span>
+          <h3 class="project-card__name">Serenity Gardens</h3>
+          <span class="project-card__location">📍 Bengaluru, Karnataka</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-3" data-category="township">
+        <div class="project-card__image">
+          <div class="project-card__img-placeholder"><span>Project Image</span></div>
+        </div>
+        <div class="project-card__overlay"></div>
+        <div class="project-card__info">
+          <span class="project-card__category">Township</span>
+          <h3 class="project-card__name">Prestige One City</h3>
+          <span class="project-card__location">📍 Hyderabad, Telangana</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-4" data-category="residential">
+        <div class="project-card__image">
+          <div class="project-card__img-placeholder"><span>Project Image</span></div>
+        </div>
+        <div class="project-card__overlay"></div>
+        <div class="project-card__info">
+          <span class="project-card__category">Residential</span>
+          <h3 class="project-card__name">Crown Villas</h3>
+          <span class="project-card__location">📍 Delhi NCR</span>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-5" data-category="commercial">
+        <div class="project-card__image">
+          <div class="project-card__img-placeholder"><span>Project Image</span></div>
+        </div>
+        <div class="project-card__overlay"></div>
+        <div class="project-card__info">
+          <span class="project-card__category">Commercial</span>
+          <h3 class="project-card__name">The Exchange Tower</h3>
+          <span class="project-card__location">📍 Chennai, Tamil Nadu</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projects__cta-wrap reveal">
+      <a href="pages/projects.html" class="btn-outline">View All Projects</a>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+
+    <div class="section-header" style="margin-bottom:3rem;">
+      <div class="section-tag reveal">
+        <span class="gold-line"></span>
+        <span>Client Stories</span>
+        <span class="gold-line"></span>
+      </div>
+      <h2 class="section-heading reveal reveal-delay-1" id="testimonials-heading">
+        Words From Our<br /><em>Valued Investors</em>
+      </h2>
+    </div>
+
+    <div class="testimonials__track-wrapper">
+      <div class="testimonials__track">
+
+        <div class="testimonial-card">
+          <span class="testimonial-card__quote-icon">"</span>
+          <p class="testimonial-card__text">
+            The returns on my Prestige portfolio have consistently outperformed every benchmark. More importantly, the transparency and professionalism set them apart in an industry where trust is rare.
+          </p>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">RK</div>
+            <div>
+              <span class="testimonial-card__name">Rajesh Kapoor</span>
+              <span class="testimonial-card__role">Managing Director, Kapoor Industries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <span class="testimonial-card__quote-icon">"</span>
+          <p class="testimonial-card__text">
+            From concept to handover, Prestige Estates delivered on every promise. The Apex Residences is everything they said it would be — and more. Truly a product built for the elite.
+          </p>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AN</div>
+            <div>
+              <span class="testimonial-card__name">Ananya Nair</span>
+              <span class="testimonial-card__role">Founder, Nair Capital Group</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <span class="testimonial-card__quote-icon">"</span>
+          <p class="testimonial-card__text">
+            I've invested across real estate firms in three countries. Prestige stands alone — not just for the quality of their assets, but for the rigour of their investment advisory process.
+          </p>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">SM</div>
+            <div>
+              <span class="testimonial-card__name">Suresh Mehta</span>
+              <span class="testimonial-card__role">HNI Investor & Philanthropist</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <span class="testimonial-card__quote-icon">"</span>
+          <p class="testimonial-card__text">
+            Serenity Gardens gave my parents the dignity and luxury they deserve. A thoughtfully crafted community that understands what senior living should truly feel like.
+          </p>
+          <div class="testimonial-card__stars">
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+            <span class="testimonial-card__star">★</span>
+          </div>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">PS</div>
+            <div>
+              <span class="testimonial-card__name">Priya Sharma</span>
+              <span class="testimonial-card__role">CXO, Global Tech Solutions</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="testimonials__controls">
+      <button class="testimonials__btn testimonials__btn--prev" aria-label="Previous testimonial">←</button>
+      <div class="testimonials__dots">
+        <div class="testimonials__dot active"></div>
+        <div class="testimonials__dot"></div>
+        <div class="testimonials__dot"></div>
+        <div class="testimonials__dot"></div>
+      </div>
+      <button class="testimonials__btn testimonials__btn--next" aria-label="Next testimonial">→</button>
+    </div>
+
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contact" role="contentinfo">
+
+    <!-- CTA Band -->
+    <div class="footer__cta-band">
+      <div class="footer__cta-inner">
+        <div class="footer__cta-text">
+          <h2>Ready to Build Your<br /><em>Legacy?</em></h2>
+          <p>Connect with our wealth management experts and discover how Prestige Estates can transform your investment vision into enduring reality.</p>
+        </div>
+        <div class="footer__cta-actions">
+          <a href="mailto:connect@prestigeestates.com" class="btn-primary">Connect Us →</a>
+          <a href="tel:+911800000000" class="btn-outline">Call Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Body -->
+    <div class="footer__body">
+      <div class="footer__grid">
+
+        <!-- Brand Column -->
+        <div>
+          <div class="footer__brand-logo">
+            <!-- <img src="assets/images/logo.png" alt="Prestige Estates" /> -->
+            <span class="footer__brand-logo-text">PRESTIGE ESTATES</span>
+          </div>
+          <p class="footer__brand-tagline">"Building Legacies, Defining Skylines"</p>
+          <p class="footer__brand-desc">
+            Two decades of excellence in real estate wealth management. We build more than structures — we craft the foundations of generational prosperity.
+          </p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="footer__social-icon" aria-label="Instagram">ig</a>
+            <a href="#" class="footer__social-icon" aria-label="Twitter / X">𝕏</a>
+            <a href="#" class="footer__social-icon" aria-label="YouTube">▶</a>
+            <a href="#" class="footer__social-icon" aria-label="Facebook">fb</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="#about" class="footer__link">About Us</a></li>
+            <li><a href="pages/projects.html" class="footer__link">All Projects</a></li>
+            <li><a href="#services" class="footer__link">Services</a></li>
+            <li><a href="#testimonials" class="footer__link">Testimonials</a></li>
+            <li><a href="#contact" class="footer__link">Contact</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Media & Press</a></li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h3 class="footer__col-title">Projects</h3>
+          <ul class="footer__links">
+            <li><a href="pages/residential.html" class="footer__link">Residential</a></li>
+            <li><a href="pages/commercial.html" class="footer__link">Commercial</a></li>
+            <li><a href="pages/senior-living.html" class="footer__link">Senior Living</a></li>
+            <li><a href="pages/mixed-use.html" class="footer__link">Mixed-Use / Township</a></li>
+            <li><a href="pages/projects.html" class="footer__link">Ongoing Projects</a></li>
+            <li><a href="pages/projects.html" class="footer__link">Completed Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact + Newsletter -->
+        <div>
+          <h3 class="footer__col-title">Get in Touch</h3>
+
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">📍</div>
+            <div class="footer__contact-text">
+              Prestige Tower, 14th Floor,<br />
+              Bandra Kurla Complex,<br />
+              Mumbai — 400 051
+            </div>
+          </div>
+
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">📞</div>
+            <div class="footer__contact-text">
+              <a href="tel:+911800000000">1800 000 0000</a><br />
+              <span style="font-size:0.68rem; color:var(--text-dim);">Mon–Sat, 9am–7pm IST</span>
+            </div>
+          </div>
+
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">✉</div>
+            <div class="footer__contact-text">
+              <a href="mailto:connect@prestigeestates.com">connect@prestigeestates.com</a>
+            </div>
+          </div>
+
+          <h3 class="footer__col-title" style="margin-top:2rem;">Newsletter</h3>
+          <p class="footer__newsletter-text">
+            Receive exclusive investment insights and project previews before the market.
+          </p>
+          <form class="footer__newsletter-form" novalidate>
+            <input
+              type="email"
+              class="footer__newsletter-input"
+              placeholder="Your email address"
+              required
+              aria-label="Email address for newsletter"
+            />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          © 2025 <span>Prestige Estates</span>. All rights reserved. Crafted with intention.
+        </p>
+        <ul class="footer__legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">RERA Disclosures</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/video.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
