@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HEMKEY Projects — Landmark real estate developments across Australia, Dubai and India." />
+  <title>Projects — HEMKEY Real Estate</title>
+
+  <link rel="icon" href="../assets/Sobha_(company).svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/sections.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <style>
+    /* ── Page hero ── */
+    .page-hero {
+      padding: clamp(7rem, 14vw, 12rem) 0 clamp(4rem, 7vw, 7rem);
+      background: var(--black-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 30%, rgba(239,214,127,.05) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(180,140,40,.03) 0%, transparent 60%);
+    }
+    .page-hero__inner {
+      width: 90%;
+      max-width: 90rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .page-hero__tag {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .page-hero__tag span {
+      font-family: var(--font-body);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold-start);
+    }
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 7rem);
+      font-weight: 300;
+      color: var(--warm-white);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .page-hero__title em {
+      font-style: italic;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-hero__sub {
+      max-width: 45rem;
+      font-size: clamp(.85rem, 1.3vw, 1rem);
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* ── Category section ── */
+    .projects-category {
+      padding: clamp(4rem, 7vw, 7rem) 0;
+      background: var(--black-deep);
+    }
+    .projects-category:nth-child(even) {
+      background: var(--black-soft);
+    }
+    .projects-category__inner {
+      width: 90%;
+      max-width: 90rem;
+      margin: 0 auto;
+    }
+    .projects-category__header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .projects-category__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: var(--warm-white);
+    }
+    .projects-category__title em {
+      font-style: italic;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .projects-category__count {
+      font-family: var(--font-body);
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding-bottom: .3rem;
+    }
+
+    /* ── Full projects grid ── */
+    .projects-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .project-full-card {
+      background: var(--black-deep);
+      border: var(--border-gold);
+      overflow: hidden;
+      transition: border-color .3s ease, transform .4s ease;
+    }
+    .project-full-card:hover {
+      border-color: rgba(239,214,127,.5);
+      transform: translateY(-4px);
+    }
+    .project-full-card__image {
+      position: relative;
+      width: 100%;
+      padding-bottom: 62%;
+      overflow: hidden;
+    }
+    .project-full-card__status {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: .25rem .7rem;
+      font-family: var(--font-body);
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .project-full-card__status--ongoing   { background: rgba(239,214,127,.15); color: var(--gold-start); border: 1px solid rgba(239,214,127,.3); }
+    .project-full-card__status--completed { background: rgba(100,200,120,.15); color: #81c995; border: 1px solid rgba(100,200,120,.3); }
+    .project-full-card__status--upcoming  { background: rgba(150,150,255,.15); color: #a0a0f0; border: 1px solid rgba(150,150,255,.3); }
+    .project-full-card__body { padding: 1.5rem; }
+    .project-full-card__meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: .6rem; }
+    .project-full-card__category { font-family: var(--font-body); font-size: .6rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-start); }
+    .project-full-card__country { font-size: 1.1rem; }
+    .project-full-card__name { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.5rem); font-weight: 400; color: var(--warm-white); margin-bottom: .4rem; line-height: 1.2; }
+    .project-full-card__location { font-family: var(--font-body); font-size: .7rem; color: var(--text-dim); margin-bottom: 1rem; display: block; }
+    .project-full-card__details { display: flex; gap: 1.5rem; padding-top: 1rem; border-top: var(--border-gold); }
+    .project-full-card__detail { display: flex; flex-direction: column; gap: .2rem; }
+    .project-full-card__detail-val { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+    .project-full-card__detail-key { font-family: var(--font-body); font-size: .58rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
+
+    /* Empty state shown while JS loads */
+    .projects-loading {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      font-family: var(--font-body);
+      font-size: .75rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 60rem) { .projects-full-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 40rem) { .projects-full-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" role="banner">
+
+    <a href="../index.html" class="navbar__logo" aria-label="HEMKEY Home">
+      <img src="../assets/Sobha_(company).svg" alt="HEMKEY Logo" class="navbar__logo-img" />
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="navbar__nav">
+        <li class="navbar__nav-item">
+          <a href="../index.html#about" class="navbar__nav-link">About</a>
+        </li>
+        <li class="navbar__nav-item">
+          <a href="projects.html" class="navbar__nav-link has-dropdown" style="color:var(--gold-start);">
+            Projects <span class="chevron">▾</span>
+          </a>
+          <div class="navbar__dropdown" role="menu">
+            <a href="#residential"   class="navbar__dropdown-link" role="menuitem">Residential</a>
+            <a href="#commercial"    class="navbar__dropdown-link" role="menuitem">Commercial</a>
+            <a href="#senior-living" class="navbar__dropdown-link" role="menuitem">Senior Living</a>
+            <a href="#township"      class="navbar__dropdown-link" role="menuitem">Mixed-Use / Township</a>
+          </div>
+        </li>
+        <li class="navbar__nav-item">
+          <a href="services.html" class="navbar__nav-link">Services</a>
+        </li>
+        <li class="navbar__nav-item">
+          <a href="../index.html#locations" class="navbar__nav-link">Locations</a>
+        </li>
+        <li class="navbar__nav-item">
+          <a href="insights.html" class="navbar__nav-link">Insights</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="../index.html#enquiry" class="navbar__cta">Get In Touch</a>
+
+    <button id="mob-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </header>
+
+  <div id="mob-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <nav>
+      <a href="../index.html#about">About</a>
+      <a href="projects.html">Projects</a>
+      <div class="mob-sub">
+        <a href="#residential">Residential</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#senior-living">Senior Living</a>
+        <a href="#township">Mixed-Use</a>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="../index.html#locations">Locations</a>
+      <a href="insights.html">Insights</a>
+      <a href="../index.html#enquiry" class="mob-cta">Get In Touch</a>
+    </nav>
+  </div>
+
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__tag">
+        <span class="gold-line"></span>
+        <span>Our Portfolio</span>
+      </div>
+      <h1 class="page-hero__title">Signature<br /><em>Developments</em></h1>
+      <p class="page-hero__sub">From the coastlines of Australia to the skylines of Dubai — every HEMKEY project is a landmark of precision, luxury, and enduring value.</p>
+    </div>
+  </section>
+
+
+  <!-- ===================== RESIDENTIAL ===================== -->
+  <!-- Cards injected by renderer.js from data-projects.js (category: "residential") -->
+  <section class="projects-category" id="residential">
+    <div class="projects-category__inner">
+      <div class="projects-category__header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
+            <span class="gold-line"></span>
+            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
+          </div>
+          <h2 class="projects-category__title">🏙️ <em>Residential</em></h2>
+        </div>
+        <span class="projects-category__count" id="projects-count-residential">Loading…</span>
+      </div>
+      <div class="projects-full-grid" id="projects-grid-residential">
+        <div class="projects-loading">Loading projects…</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== COMMERCIAL ===================== -->
+  <section class="projects-category" id="commercial">
+    <div class="projects-category__inner">
+      <div class="projects-category__header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
+            <span class="gold-line"></span>
+            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
+          </div>
+          <h2 class="projects-category__title">🏢 <em>Commercial</em></h2>
+        </div>
+        <span class="projects-category__count" id="projects-count-commercial">Loading…</span>
+      </div>
+      <div class="projects-full-grid" id="projects-grid-commercial">
+        <div class="projects-loading">Loading projects…</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== SENIOR LIVING ===================== -->
+  <section class="projects-category" id="senior-living">
+    <div class="projects-category__inner">
+      <div class="projects-category__header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
+            <span class="gold-line"></span>
+            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
+          </div>
+          <h2 class="projects-category__title">🌿 <em>Senior Living</em></h2>
+        </div>
+        <span class="projects-category__count" id="projects-count-senior">Loading…</span>
+      </div>
+      <div class="projects-full-grid" id="projects-grid-senior">
+        <div class="projects-loading">Loading projects…</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== TOWNSHIP ===================== -->
+  <section class="projects-category" id="township">
+    <div class="projects-category__inner">
+      <div class="projects-category__header">
+        <div>
+          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
+            <span class="gold-line"></span>
+            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
+          </div>
+          <h2 class="projects-category__title">🗺️ Mixed-Use &amp; <em>Township</em></h2>
+        </div>
+        <span class="projects-category__count" id="projects-count-township">Loading…</span>
+      </div>
+      <div class="projects-full-grid" id="projects-grid-township">
+        <div class="projects-loading">Loading projects…</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+
+    <div class="footer__cta-band">
+      <div class="footer__cta-inner">
+        <div class="footer__cta-text">
+          <h2>Interested in a<br /><em>Specific Project?</em></h2>
+          <p>Our advisors are ready to walk you through every detail — from floor plans to ROI projections.</p>
+        </div>
+        <div class="footer__cta-actions">
+          <a href="../index.html#enquiry" class="btn-primary">Get In Touch →</a>
+          <a href="tel:+911800000000" class="btn-outline">Call Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__body">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-logo">
+            <span class="footer__brand-logo-text">HEMKEY</span>
+          </div>
+          <p class="footer__brand-tagline">"Building Legacies, Defining Skylines"</p>
+          <p class="footer__brand-desc">Heritage. Elegance. Multinational. Kinship. Enrichment. Yield.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-icon" aria-label="LinkedIn">in</a>
+            <a href="#" class="footer__social-icon" aria-label="Instagram">ig</a>
+            <a href="#" class="footer__social-icon" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Categories</h3>
+          <ul class="footer__links">
+            <li><a href="#residential"   class="footer__link">Residential</a></li>
+            <li><a href="#commercial"    class="footer__link">Commercial</a></li>
+            <li><a href="#senior-living" class="footer__link">Senior Living</a></li>
+            <li><a href="#township"      class="footer__link">Township</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">By Country</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">🇦🇺 Australia</a></li>
+            <li><a href="#" class="footer__link">🇦🇪 Dubai, UAE</a></li>
+            <li><a href="#" class="footer__link">🇮🇳 India</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contact</h3>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">📞</div>
+            <div class="footer__contact-text"><a href="tel:+911800000000">1800 000 0000</a></div>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon">✉</div>
+            <div class="footer__contact-text"><a href="/cdn-cgi/l/email-protection#1a6a6875707f796e695a727f77717f6334797577"><span class="__cf_email__" data-cfemail="6a1a1805000f091e192a020f07010f1344090507">[email&#160;protected]</span></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 <span>HEMKEY</span>. All rights reserved.</p>
+        <ul class="footer__legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">RERA Disclosures</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Scripts — data files must load before renderer.js -->
+  <script src="../js/data/projects-data.js"></script>
+  <script src="../js/data/insights-data.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/renderer.js"></script>
+
+</body>
+</html>

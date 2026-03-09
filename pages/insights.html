@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HEMKEY Insights — Market intelligence, investment guides, and real estate perspectives." />
+  <title>Insights — HEMKEY Real Estate</title>
+
+  <link rel="icon" href="../assets/Sobha_(company).svg" type="image/svg+xml" />
+
+  <!-- Shared stylesheets -->
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/sections.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+
+  <!-- Page-specific stylesheet -->
+  <link rel="stylesheet" href="../css/insights.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" role="banner">
+
+    <a href="../index.html" class="navbar__logo" aria-label="HEMKEY Home">
+      <img src="../assets/Sobha_(company).svg" alt="HEMKEY Logo" class="navbar__logo-img" />
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="navbar__nav">
+
+        <li class="navbar__nav-item">
+          <a href="../index.html#about" class="navbar__nav-link">About</a>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="projects.html" class="navbar__nav-link has-dropdown">
+            Projects <span class="chevron">▾</span>
+          </a>
+          <div class="navbar__dropdown" role="menu">
+            <a href="projects.html#residential"   class="navbar__dropdown-link" role="menuitem">Residential</a>
+            <a href="projects.html#commercial"    class="navbar__dropdown-link" role="menuitem">Commercial</a>
+            <a href="projects.html#senior-living" class="navbar__dropdown-link" role="menuitem">Senior Living</a>
+            <a href="projects.html#township"      class="navbar__dropdown-link" role="menuitem">Mixed-Use / Township</a>
+          </div>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="services.html" class="navbar__nav-link">Services</a>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="../index.html#locations" class="navbar__nav-link">Locations</a>
+        </li>
+
+        <li class="navbar__nav-item">
+          <a href="insights.html" class="navbar__nav-link navbar__nav-link--insights">
+            Insights
+            <span class="navbar__insights-dot" aria-hidden="true"></span>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <a href="../index.html#enquiry" class="navbar__cta">Get In Touch</a>
+
+    <button id="mob-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </header>
+
+  <div id="mob-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <nav>
+      <a href="../index.html#about">About</a>
+      <a href="projects.html">Projects</a>
+      <div class="mob-sub">
+        <a href="projects.html#residential">Residential</a>
+        <a href="projects.html#commercial">Commercial</a>
+        <a href="projects.html#senior-living">Senior Living</a>
+        <a href="projects.html#township">Mixed-Use</a>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="../index.html#locations">Locations</a>
+      <a href="insights.html" class="mob-insights-link">Insights</a>
+      <a href="../index.html#enquiry" class="mob-cta">Get In Touch</a>
+    </nav>
+  </div>
+
+
+  <!-- ===================== PAGE HERO ===================== -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+
+      <div>
+        <div class="page-hero__tag">
+          <span class="gold-line"></span>
+          <span>Market Intelligence</span>
+        </div>
+        <h1 class="page-hero__title">
+          Insights &amp;<br /><em>Perspectives</em>
+        </h1>
+      </div>
+
+      <div class="page-hero__meta">
+        <p class="page-hero__sub">
+          Our global research desk tracks real estate markets across Australia, Dubai, and India —
+          translating macro shifts into actionable intelligence for serious investors.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== INSIGHTS GRID ===================== -->
+  <!--
+    Cards injected by renderer.js from js/data-insights.js.
+    To add a new article: open js/data-insights.js and push a new object into the array.
+  -->
+  <section class="insights-page" aria-labelledby="insights-page-heading">
+    <div class="insights-page__inner">
+
+      <div class="insights-filter" role="group" aria-label="Filter by category">
+        <button class="insights-filter__btn active" data-filter="all">All</button>
+        <button class="insights-filter__btn" data-filter="Market Report">Market Reports</button>
+        <button class="insights-filter__btn" data-filter="Investment Guide">Investment Guides</button>
+        <button class="insights-filter__btn" data-filter="India Focus">India Focus</button>
+        <button class="insights-filter__btn" data-filter="Lifestyle">Lifestyle</button>
+      </div>
+
+      <div class="insights-grid" id="insights-page-grid">
+        <div class="insights-loading">Loading insights…</div>
+      </div>
+
+      <div class="insights-grid-secondary" id="insights-page-grid-secondary"></div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+
+    <div class="footer__cta-band">
+      <div class="footer__cta-inner">
+        <div class="footer__cta-text">
+          <h2>Want Early<br /><em>Access?</em></h2>
+          <p>Subscribe to receive exclusive market reports and investment intelligence before public release.</p>
+        </div>
+        <div class="footer__cta-actions">
+          <a href="../index.html#enquiry" class="btn-primary">Get In Touch →</a>
+          <a href="tel:+911800000000" class="btn-outline">Call Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__body">
+      <div class="footer__grid">
+
+        <div>
+          <div class="footer__brand-logo"><span class="footer__brand-logo-text">HEMKEY</span></div>
+          <p class="footer__brand-tagline">"Building Legacies, Defining Skylines"</p>
+          <p class="footer__brand-desc">Heritage. Elegance. Multinational. Kinship. Enrichment. Yield.</p>
+          <div class="footer__socials">
+            <a href="#" class="footer__social-icon" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="footer__social-icon" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="footer__social-icon" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Categories</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Market Reports</a></li>
+            <li><a href="#" class="footer__link">Investment Guides</a></li>
+            <li><a href="#" class="footer__link">India Focus</a></li>
+            <li><a href="#" class="footer__link">Lifestyle</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Explore</h3>
+          <ul class="footer__links">
+            <li><a href="projects.html"          class="footer__link">All Projects</a></li>
+            <li><a href="services.html"           class="footer__link">Services</a></li>
+            <li><a href="../index.html#locations" class="footer__link">Locations</a></li>
+            <li><a href="../index.html#enquiry"   class="footer__link">Get In Touch</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Subscribe</h3>
+          <p class="footer__newsletter-text">Get market intelligence in your inbox before it goes public.</p>
+          <form class="footer__newsletter-form" novalidate>
+            <input type="email" class="footer__newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter" />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 <span>HEMKEY</span>. All rights reserved.</p>
+        <ul class="footer__legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">RERA Disclosures</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- ===================== SUBSCRIBE POPUP ===================== -->
+  <!--
+    Shown on page load via insights.js (800ms delay).
+    Uses sessionStorage — shown only once per session.
+    CSS: css/insights.css   JS: js/insights.js
+  -->
+  <div class="subscribe-modal" id="subscribe-modal" role="dialog" aria-label="Subscribe to HEMKEY Insights" aria-modal="true">
+
+    <div class="subscribe-modal__backdrop"></div>
+
+    <div class="subscribe-modal__panel">
+
+      <button class="subscribe-modal__close" id="subscribe-close" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Form state -->
+      <div id="subscribe-form-wrap">
+
+        <span class="subscribe-modal__eyebrow">Exclusive Access</span>
+
+        <h2 class="subscribe-modal__title">
+          Get Insights<br />Before the<br /><em>Market Does.</em>
+        </h2>
+
+        <p class="subscribe-modal__sub">
+          Join thousands of HNI investors who receive our market reports, Dubai price trackers,
+          and India opportunity alerts — 48 hours before public release.
+        </p>
+
+        <form id="subscribe-form" novalidate>
+
+          <div class="subscribe-modal__row">
+
+            <div class="subscribe-modal__field">
+              <label for="sub-phone">
+                Phone Number
+                <span class="required-star" style="color:var(--gold-start);margin-left:.2rem;">*</span>
+              </label>
+              <input
+                type="tel"
+                id="sub-phone"
+                name="phone"
+                placeholder="+91 98765 43210"
+                required
+                autocomplete="tel"
+              />
+              <span class="subscribe-modal__error" id="sub-phone-error">
+                Please enter a valid phone number.
+              </span>
+            </div>
+
+            <div class="subscribe-modal__field">
+              <label for="sub-email">
+                Email Address
+                <span class="optional-tag">(Optional)</span>
+              </label>
+              <input
+                type="email"
+                id="sub-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+              />
+            </div>
+
+          </div>
+
+          <button type="submit" class="subscribe-modal__submit">
+            Subscribe &amp; Unlock Insights
+          </button>
+
+        </form>
+
+        <span class="subscribe-modal__skip" id="subscribe-skip" role="button" tabindex="0">
+          No thanks, I'll browse without subscribing
+        </span>
+
+      </div>
+
+      <!-- Success state -->
+      <div class="subscribe-modal__success" id="subscribe-success" style="display:none;">
+        <div class="subscribe-modal__success-icon">✓</div>
+        <h3>You're In.</h3>
+        <p>Welcome to the inner circle. Your first market report lands within 24 hours.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <!--
+    Load order: data files first → shared utilities → renderer → page script
+  -->
+  <script src="../js/data/projects-data.js"></script>
+  <script src="../js/data/insights-data.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/renderer.js"></script>
+
+  <!-- Page-specific script (subscribe modal + filter) -->
+  <script src="../js/insights.js"></script>
+
+</body>
+</html>
