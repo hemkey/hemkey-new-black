@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HEMKEY Projects — Landmark real estate developments across Australia, Dubai and India." />
+  <meta name="description" content="HEMKEY Projects — Luxury residential, commercial, senior living, and township developments across Australia, Dubai, and India." />
   <title>Projects — HEMKEY Real Estate</title>
 
   <link rel="icon" href="../assets/Sobha_(company).svg" type="image/svg+xml" />
@@ -12,190 +12,23 @@
   <link rel="stylesheet" href="../css/navbar.css" />
   <link rel="stylesheet" href="../css/sections.css" />
   <link rel="stylesheet" href="../css/footer.css" />
-
-  <style>
-    /* ── Page hero ── */
-    .page-hero {
-      padding: clamp(7rem, 14vw, 12rem) 0 clamp(4rem, 7vw, 7rem);
-      background: var(--black-deep);
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 80% 30%, rgba(239,214,127,.05) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(180,140,40,.03) 0%, transparent 60%);
-    }
-    .page-hero__inner {
-      width: 90%;
-      max-width: 90rem;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-    .page-hero__tag {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .page-hero__tag span {
-      font-family: var(--font-body);
-      font-size: .65rem;
-      font-weight: 600;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: var(--gold-start);
-    }
-    .page-hero__title {
-      font-family: var(--font-display);
-      font-size: clamp(3rem, 7vw, 7rem);
-      font-weight: 300;
-      color: var(--warm-white);
-      line-height: 1;
-      margin-bottom: 1.5rem;
-    }
-    .page-hero__title em {
-      font-style: italic;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .page-hero__sub {
-      max-width: 45rem;
-      font-size: clamp(.85rem, 1.3vw, 1rem);
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
-
-    /* ── Category section ── */
-    .projects-category {
-      padding: clamp(4rem, 7vw, 7rem) 0;
-      background: var(--black-deep);
-    }
-    .projects-category:nth-child(even) {
-      background: var(--black-soft);
-    }
-    .projects-category__inner {
-      width: 90%;
-      max-width: 90rem;
-      margin: 0 auto;
-    }
-    .projects-category__header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
-      flex-wrap: wrap;
-    }
-    .projects-category__title {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3.5vw, 3rem);
-      font-weight: 300;
-      color: var(--warm-white);
-    }
-    .projects-category__title em {
-      font-style: italic;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .projects-category__count {
-      font-family: var(--font-body);
-      font-size: .65rem;
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      padding-bottom: .3rem;
-    }
-
-    /* ── Full projects grid ── */
-    .projects-full-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .project-full-card {
-      background: var(--black-deep);
-      border: var(--border-gold);
-      overflow: hidden;
-      transition: border-color .3s ease, transform .4s ease;
-    }
-    .project-full-card:hover {
-      border-color: rgba(239,214,127,.5);
-      transform: translateY(-4px);
-    }
-    .project-full-card__image {
-      position: relative;
-      width: 100%;
-      padding-bottom: 62%;
-      overflow: hidden;
-    }
-    .project-full-card__status {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: .25rem .7rem;
-      font-family: var(--font-body);
-      font-size: .58rem;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    .project-full-card__status--ongoing   { background: rgba(239,214,127,.15); color: var(--gold-start); border: 1px solid rgba(239,214,127,.3); }
-    .project-full-card__status--completed { background: rgba(100,200,120,.15); color: #81c995; border: 1px solid rgba(100,200,120,.3); }
-    .project-full-card__status--upcoming  { background: rgba(150,150,255,.15); color: #a0a0f0; border: 1px solid rgba(150,150,255,.3); }
-    .project-full-card__body { padding: 1.5rem; }
-    .project-full-card__meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: .6rem; }
-    .project-full-card__category { font-family: var(--font-body); font-size: .6rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-start); }
-    .project-full-card__country { font-size: 1.1rem; }
-    .project-full-card__name { font-family: var(--font-display); font-size: clamp(1.1rem,2vw,1.5rem); font-weight: 400; color: var(--warm-white); margin-bottom: .4rem; line-height: 1.2; }
-    .project-full-card__location { font-family: var(--font-body); font-size: .7rem; color: var(--text-dim); margin-bottom: 1rem; display: block; }
-    .project-full-card__details { display: flex; gap: 1.5rem; padding-top: 1rem; border-top: var(--border-gold); }
-    .project-full-card__detail { display: flex; flex-direction: column; gap: .2rem; }
-    .project-full-card__detail-val { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
-    .project-full-card__detail-key { font-family: var(--font-body); font-size: .58rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dim); }
-
-    /* Empty state shown while JS loads */
-    .projects-loading {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 3rem;
-      font-family: var(--font-body);
-      font-size: .75rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-    }
-
-    @media (max-width: 60rem) { .projects-full-grid { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 40rem) { .projects-full-grid { grid-template-columns: 1fr; } }
-  </style>
+  <link rel="stylesheet" href="../css/projects.css" />
 </head>
 
 <body>
 
   <!-- ===================== NAVBAR ===================== -->
   <header class="navbar" role="banner">
-
     <a href="../index.html" class="navbar__logo" aria-label="HEMKEY Home">
       <img src="../assets/Sobha_(company).svg" alt="HEMKEY Logo" class="navbar__logo-img" />
     </a>
-
     <nav aria-label="Main navigation">
       <ul class="navbar__nav">
         <li class="navbar__nav-item">
           <a href="../index.html#about" class="navbar__nav-link">About</a>
         </li>
         <li class="navbar__nav-item">
-          <a href="projects.html" class="navbar__nav-link has-dropdown" style="color:var(--gold-start);">
+          <a href="projects.html" class="navbar__nav-link has-dropdown navbar__nav-link--active">
             Projects <span class="chevron">▾</span>
           </a>
           <div class="navbar__dropdown" role="menu">
@@ -212,17 +45,17 @@
           <a href="../index.html#locations" class="navbar__nav-link">Locations</a>
         </li>
         <li class="navbar__nav-item">
-          <a href="insights.html" class="navbar__nav-link">Insights</a>
+          <a href="insights.html" class="navbar__nav-link navbar__nav-link--insights">
+            Insights
+            <span class="navbar__insights-dot" aria-hidden="true"></span>
+          </a>
         </li>
       </ul>
     </nav>
-
     <a href="../index.html#enquiry" class="navbar__cta">Get In Touch</a>
-
     <button id="mob-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-
   </header>
 
   <div id="mob-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
@@ -237,7 +70,7 @@
       </div>
       <a href="services.html">Services</a>
       <a href="../index.html#locations">Locations</a>
-      <a href="insights.html">Insights</a>
+      <a href="insights.html" style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Insights</a>
       <a href="../index.html#enquiry" class="mob-cta">Get In Touch</a>
     </nav>
   </div>
@@ -246,31 +79,74 @@
   <!-- ===================== PAGE HERO ===================== -->
   <section class="page-hero">
     <div class="page-hero__inner">
-      <div class="page-hero__tag">
-        <span class="gold-line"></span>
-        <span>Our Portfolio</span>
+      <div>
+        <div class="page-hero__tag">
+          <span class="gold-line"></span>
+          <span>Our Portfolio</span>
+        </div>
+        <h1 class="page-hero__title">
+          Projects<br /><em>Across Nations</em>
+        </h1>
       </div>
-      <h1 class="page-hero__title">Signature<br /><em>Developments</em></h1>
-      <p class="page-hero__sub">From the coastlines of Australia to the skylines of Dubai — every HEMKEY project is a landmark of precision, luxury, and enduring value.</p>
+      <div class="page-hero__meta">
+        <p class="page-hero__sub">
+          From ultra-luxury residences on Palm Jumeirah to landmark senior living communities in Melbourne —
+          every HEMKEY project is built to endure, inspire, and deliver exceptional returns.
+        </p>
+        <div class="page-hero__stats">
+          <div class="page-hero__stat">
+            <span class="page-hero__stat-num" data-counter data-target="380" data-suffix="+">0+</span>
+            <span class="page-hero__stat-label">Total Projects</span>
+          </div>
+          <div class="page-hero__stat">
+            <span class="page-hero__stat-num" data-counter data-target="3">0</span>
+            <span class="page-hero__stat-label">Countries</span>
+          </div>
+          <div class="page-hero__stat">
+            <span class="page-hero__stat-num" data-counter data-target="20" data-suffix="+">0+</span>
+            <span class="page-hero__stat-label">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
 
+  <!-- ===================== FILTER BAR ===================== -->
+  <div class="projects-page__filter-wrap">
+    <div class="projects-page__filter-inner">
+      <div class="projects__filter" role="group" aria-label="Filter projects">
+        <button class="projects__filter-btn active" data-filter="all">All Projects</button>
+        <button class="projects__filter-btn" data-filter="residential">Residential</button>
+        <button class="projects__filter-btn" data-filter="commercial">Commercial</button>
+        <button class="projects__filter-btn" data-filter="senior">Senior Living</button>
+        <button class="projects__filter-btn" data-filter="township">Township</button>
+      </div>
+      <div class="projects-page__status-filters">
+        <button class="projects-page__status-btn active" data-status="all">All</button>
+        <button class="projects-page__status-btn" data-status="completed">Completed</button>
+        <button class="projects-page__status-btn" data-status="ongoing">Ongoing</button>
+        <button class="projects-page__status-btn" data-status="upcoming">Upcoming</button>
+      </div>
+    </div>
+  </div>
+
+
   <!-- ===================== RESIDENTIAL ===================== -->
-  <!-- Cards injected by renderer.js from data-projects.js (category: "residential") -->
-  <section class="projects-category" id="residential">
-    <div class="projects-category__inner">
-      <div class="projects-category__header">
-        <div>
-          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
-            <span class="gold-line"></span>
-            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
-          </div>
-          <h2 class="projects-category__title">🏙️ <em>Residential</em></h2>
+  <section class="projects-page__section" id="residential" aria-labelledby="residential-heading">
+    <div class="projects-page__section-inner">
+      <div class="projects-page__section-header reveal">
+        <div class="projects-page__section-tag">
+          <span class="gold-line"></span>
+          <span>Residential</span>
         </div>
-        <span class="projects-category__count" id="projects-count-residential">Loading…</span>
+        <h2 class="projects-page__section-title" id="residential-heading">
+          Homes Crafted for the<br /><em>Discerning Few</em>
+        </h2>
+        <span class="projects-page__count" id="projects-count-residential">— Projects</span>
       </div>
       <div class="projects-full-grid" id="projects-grid-residential">
+        <!-- Populated by renderer.js -->
         <div class="projects-loading">Loading projects…</div>
       </div>
     </div>
@@ -278,17 +154,17 @@
 
 
   <!-- ===================== COMMERCIAL ===================== -->
-  <section class="projects-category" id="commercial">
-    <div class="projects-category__inner">
-      <div class="projects-category__header">
-        <div>
-          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
-            <span class="gold-line"></span>
-            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
-          </div>
-          <h2 class="projects-category__title">🏢 <em>Commercial</em></h2>
+  <section class="projects-page__section projects-page__section--alt" id="commercial" aria-labelledby="commercial-heading">
+    <div class="projects-page__section-inner">
+      <div class="projects-page__section-header reveal">
+        <div class="projects-page__section-tag">
+          <span class="gold-line"></span>
+          <span>Commercial</span>
         </div>
-        <span class="projects-category__count" id="projects-count-commercial">Loading…</span>
+        <h2 class="projects-page__section-title" id="commercial-heading">
+          Grade-A Spaces Where<br /><em>Business Thrives</em>
+        </h2>
+        <span class="projects-page__count" id="projects-count-commercial">— Projects</span>
       </div>
       <div class="projects-full-grid" id="projects-grid-commercial">
         <div class="projects-loading">Loading projects…</div>
@@ -298,18 +174,54 @@
 
 
   <!-- ===================== SENIOR LIVING ===================== -->
-  <section class="projects-category" id="senior-living">
-    <div class="projects-category__inner">
-      <div class="projects-category__header">
-        <div>
-          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
-            <span class="gold-line"></span>
-            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
-          </div>
-          <h2 class="projects-category__title">🌿 <em>Senior Living</em></h2>
+  <section class="projects-page__section" id="senior-living" aria-labelledby="senior-heading">
+    <div class="projects-page__section-inner">
+      <div class="projects-page__section-header reveal">
+        <div class="projects-page__section-tag">
+          <span class="gold-line"></span>
+          <span>Senior Living</span>
         </div>
-        <span class="projects-category__count" id="projects-count-senior">Loading…</span>
+        <h2 class="projects-page__section-title" id="senior-heading">
+          Life's Finest Chapter,<br /><em>Beautifully Lived</em>
+        </h2>
+        <span class="projects-page__count" id="projects-count-senior">— Communities</span>
       </div>
+
+      <!-- Senior Living USP Banner -->
+      <div class="senior-usp-banner reveal reveal-delay-1">
+        <div class="senior-usp-banner__inner">
+          <div class="senior-usp-banner__item">
+            <span class="senior-usp-banner__icon">🏥</span>
+            <span class="senior-usp-banner__label">24/7 Medical Care</span>
+          </div>
+          <div class="senior-usp-banner__divider"></div>
+          <div class="senior-usp-banner__item">
+            <span class="senior-usp-banner__icon">🌿</span>
+            <span class="senior-usp-banner__label">Wellness & Spa</span>
+          </div>
+          <div class="senior-usp-banner__divider"></div>
+          <div class="senior-usp-banner__item">
+            <span class="senior-usp-banner__icon">🍽️</span>
+            <span class="senior-usp-banner__label">Curated Dining</span>
+          </div>
+          <div class="senior-usp-banner__divider"></div>
+          <div class="senior-usp-banner__item">
+            <span class="senior-usp-banner__icon">🔒</span>
+            <span class="senior-usp-banner__label">24/7 Security</span>
+          </div>
+          <div class="senior-usp-banner__divider"></div>
+          <div class="senior-usp-banner__item">
+            <span class="senior-usp-banner__icon">🚐</span>
+            <span class="senior-usp-banner__label">Concierge Transport</span>
+          </div>
+          <div class="senior-usp-banner__divider"></div>
+          <div class="senior-usp-banner__item">
+            <span class="senior-usp-banner__icon">🎨</span>
+            <span class="senior-usp-banner__label">Arts & Activities</span>
+          </div>
+        </div>
+      </div>
+
       <div class="projects-full-grid" id="projects-grid-senior">
         <div class="projects-loading">Loading projects…</div>
       </div>
@@ -318,17 +230,17 @@
 
 
   <!-- ===================== TOWNSHIP ===================== -->
-  <section class="projects-category" id="township">
-    <div class="projects-category__inner">
-      <div class="projects-category__header">
-        <div>
-          <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.6rem;">
-            <span class="gold-line"></span>
-            <span style="font-family:var(--font-body);font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-start);">Category</span>
-          </div>
-          <h2 class="projects-category__title">🗺️ Mixed-Use &amp; <em>Township</em></h2>
+  <section class="projects-page__section projects-page__section--alt" id="township" aria-labelledby="township-heading">
+    <div class="projects-page__section-inner">
+      <div class="projects-page__section-header reveal">
+        <div class="projects-page__section-tag">
+          <span class="gold-line"></span>
+          <span>Mixed-Use / Township</span>
         </div>
-        <span class="projects-category__count" id="projects-count-township">Loading…</span>
+        <h2 class="projects-page__section-title" id="township-heading">
+          Self-Sustaining Cities<br /><em>Built for Generations</em>
+        </h2>
+        <span class="projects-page__count" id="projects-count-township">— Townships</span>
       </div>
       <div class="projects-full-grid" id="projects-grid-township">
         <div class="projects-loading">Loading projects…</div>
@@ -337,14 +249,34 @@
   </section>
 
 
+  <!-- ===================== CTA BAND ===================== -->
+  <section class="projects-page__cta-band">
+    <div class="projects-page__cta-inner">
+      <div class="reveal">
+        <div class="projects-page__section-tag" style="margin-bottom:1.2rem;">
+          <span class="gold-line"></span>
+          <span>Invest With Us</span>
+        </div>
+        <h2 class="projects-page__cta-title">
+          Found Your Next<br /><em>Investment?</em>
+        </h2>
+        <p class="projects-page__cta-sub">Our wealth advisors are ready to walk you through the opportunity, numbers, and vision behind each project.</p>
+      </div>
+      <div class="projects-page__cta-actions reveal reveal-delay-2">
+        <a href="../index.html#enquiry" class="btn-primary">Schedule a Consultation →</a>
+        <a href="tel:+911800000000" class="btn-outline">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer" role="contentinfo">
-
     <div class="footer__cta-band">
       <div class="footer__cta-inner">
         <div class="footer__cta-text">
-          <h2>Interested in a<br /><em>Specific Project?</em></h2>
-          <p>Our advisors are ready to walk you through every detail — from floor plans to ROI projections.</p>
+          <h2>Ready to Build Your<br /><em>Legacy?</em></h2>
+          <p>Connect with our wealth management experts today.</p>
         </div>
         <div class="footer__cta-actions">
           <a href="../index.html#enquiry" class="btn-primary">Get In Touch →</a>
@@ -352,19 +284,22 @@
         </div>
       </div>
     </div>
-
     <div class="footer__body">
       <div class="footer__grid">
         <div>
-          <div class="footer__brand-logo">
-            <span class="footer__brand-logo-text">HEMKEY</span>
-          </div>
+          <div class="footer__brand-logo"><span class="footer__brand-logo-text">HEMKEY</span></div>
           <p class="footer__brand-tagline">"Building Legacies, Defining Skylines"</p>
-          <p class="footer__brand-desc">Heritage. Elegance. Multinational. Kinship. Enrichment. Yield.</p>
+          <p class="footer__brand-desc">Heritage. Elegance. Multinational. Kinship. Enrichment. Yield.<br />Two decades of excellence across three nations.</p>
           <div class="footer__socials">
-            <a href="#" class="footer__social-icon" aria-label="LinkedIn">in</a>
-            <a href="#" class="footer__social-icon" aria-label="Instagram">ig</a>
-            <a href="#" class="footer__social-icon" aria-label="YouTube">▶</a>
+            <a href="#" class="footer__social-icon" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="footer__social-icon" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="footer__social-icon" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
           </div>
         </div>
         <div>
@@ -377,26 +312,23 @@
           </ul>
         </div>
         <div>
-          <h3 class="footer__col-title">By Country</h3>
+          <h3 class="footer__col-title">Explore</h3>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">🇦🇺 Australia</a></li>
-            <li><a href="#" class="footer__link">🇦🇪 Dubai, UAE</a></li>
-            <li><a href="#" class="footer__link">🇮🇳 India</a></li>
+            <li><a href="../index.html#about"     class="footer__link">About Us</a></li>
+            <li><a href="services.html"           class="footer__link">Services</a></li>
+            <li><a href="insights.html"           class="footer__link">Insights</a></li>
+            <li><a href="../index.html#enquiry"   class="footer__link">Get In Touch</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="footer__col-title">Contact</h3>
-          <div class="footer__contact-item">
-            <div class="footer__contact-icon">📞</div>
-            <div class="footer__contact-text"><a href="tel:+911800000000">1800 000 0000</a></div>
-          </div>
-          <div class="footer__contact-item">
-            <div class="footer__contact-icon">✉</div>
-            <div class="footer__contact-text"><a href="/cdn-cgi/l/email-protection#1a6a6875707f796e695a727f77717f6334797577"><span class="__cf_email__" data-cfemail="6a1a1805000f091e192a020f07010f1344090507">[email&#160;protected]</span></a></div>
-          </div>
+          <h3 class="footer__col-title">Newsletter</h3>
+          <p class="footer__newsletter-text">Receive exclusive project previews before launch.</p>
+          <form class="footer__newsletter-form" novalidate>
+            <input type="email" class="footer__newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter" />
+            <button type="submit" class="footer__newsletter-btn">Subscribe</button>
+          </form>
         </div>
       </div>
-
       <div class="footer__bottom">
         <p class="footer__copyright">© 2026 <span>HEMKEY</span>. All rights reserved.</p>
         <ul class="footer__legal">
@@ -409,6 +341,71 @@
   </footer>
 
 
+  <!-- ===================== ENQUIRY FAB ===================== -->
+  <button class="enquiry-fab" id="enquiry-fab-btn" aria-label="Open enquiry form">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span>Enquire</span>
+  </button>
+
+  <!-- ===================== ENQUIRY MODAL ===================== -->
+  <div class="enquiry-modal" id="enquiry" role="dialog" aria-label="Enquiry Form" aria-modal="true">
+    <div class="enquiry-modal__backdrop" id="enquiry-backdrop"></div>
+    <div class="enquiry-modal__panel">
+      <button class="enquiry-modal__close" id="enquiry-close" aria-label="Close enquiry">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="enquiry-modal__header">
+        <span class="enquiry-modal__eyebrow">Let's Connect</span>
+        <h2 class="enquiry-modal__title">Start Your<br /><em>Journey</em></h2>
+        <p class="enquiry-modal__sub">Our advisors will reach out within 24 hours.</p>
+      </div>
+      <form class="enquiry-modal__form" id="enquiry-form" novalidate>
+        <div class="enquiry-modal__field">
+          <label for="enq-name">Full Name</label>
+          <input type="text" id="enq-name" name="name" placeholder="Your full name" autocomplete="name" />
+        </div>
+        <div class="enquiry-modal__field">
+          <label for="enq-phone">Phone Number <span class="required-star">*</span></label>
+          <input type="tel" id="enq-phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
+          <span class="enquiry-modal__error" id="phone-error">Please enter a valid phone number.</span>
+        </div>
+        <div class="enquiry-modal__field">
+          <label for="enq-email">Email Address <span class="optional-tag">(Optional)</span></label>
+          <input type="email" id="enq-email" name="email" placeholder="you@example.com" autocomplete="email" />
+        </div>
+        <div class="enquiry-modal__field">
+          <label for="enq-interest">I'm Interested In</label>
+          <select id="enq-interest" name="interest">
+            <option value="">Select a category</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="senior">Senior Living</option>
+            <option value="township">Township / Mixed-Use</option>
+            <option value="advisory">Wealth Advisory</option>
+          </select>
+        </div>
+        <div class="enquiry-modal__field">
+          <label for="enq-comments">Comments <span class="optional-tag">(Optional)</span></label>
+          <textarea id="enq-comments" name="comments" rows="3" placeholder="Tell us about your investment goals…"></textarea>
+        </div>
+        <button type="submit" class="enquiry-modal__submit">
+          Send Enquiry
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <p class="enquiry-modal__privacy">🔒 Your information is private and never shared.</p>
+      </form>
+      <div class="enquiry-modal__success" id="enquiry-success" style="display:none;">
+        <div class="enquiry-modal__success-icon">✓</div>
+        <h3>Thank You!</h3>
+        <p>Your enquiry has been received. An advisor will contact you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
 
   <!-- Scripts — data files must load before renderer.js -->
   <script src="../js/data/projects-data.js"></script>
@@ -416,6 +413,7 @@
   <script src="../js/navbar.js"></script>
   <script src="../js/animations.js"></script>
   <script src="../js/renderer.js"></script>
-
+  <script src="../js/enquiry.js"></script>
+  <script src="../js/projects.js"></script>
 </body>
 </html>
